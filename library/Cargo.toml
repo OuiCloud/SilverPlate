@@ -1,0 +1,28 @@
+[package]
+name          = "{{ crate_name }}"
+version       = "0.1.0"
+edition       = "2021"
+rust-version  = "1.60"
+description   = ""
+license       = "MIT OR Apache-2.0"
+repository    = "https://github.com/{{ owner_name }}/{{ crate_name }}"
+homepage      = "https://github.com/{{ owner_name }}/{{ crate_name }}"
+documentation = "https://docs.rs/{{ crate_name }}"
+readme        = "README.md"
+authors       = ["{{ author_name }}"]
+keywords      = [""]
+categories    = [""]
+
+exclude = [".vscode/*", ".github/*"]
+
+[package.metadata.cargo-sync-rdme.badge]
+style = "plastic"
+
+[package.metadata.cargo-sync-rdme.badge.badges]
+maintenance  = true
+rust-version = true
+
+[badges]
+maintenance = { status = "actively-developed" }
+
+[dependencies]

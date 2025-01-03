@@ -1,0 +1,31 @@
+[package]
+name          = "{{ crate_name }}"
+version       = "0.1.0"
+edition       = "2021"
+rust-version  = "1.75"
+description   = ""
+license       = "MIT OR Apache-2.0"
+repository    = "https://github.com/{{ owner_name }}/{{ crate_name }}"
+homepage      = "https://github.com/{{ owner_name }}/{{ crate_name }}"
+documentation = "https://docs.rs/{{ crate_name }}"
+readme        = "README.md"
+authors       = ["{{ author_name }}"]
+keywords      = [""]
+categories    = [""]
+
+exclude = [".vscode/*", ".github/*"]
+
+[package.metadata.cargo-sync-rdme.badge]
+style = "plastic"
+
+[package.metadata.cargo-sync-rdme.badge.badges]
+maintenance  = true
+rust-version = true
+
+[badges]
+maintenance = { status = "actively-developed" }
+
+[dependencies]
+tokio              = { version = "1.42", default-features = false, features = ["fs", "macros", "net", "rt-multi-thread", "tracing"] }
+tracing            = { version = "0.1", default-features = false, features = ["std", "attributes"] }
+tracing-subscriber = { version = "0.3", default-features = false, features = ["std", "fmt", "thread_local", "tracing-log", "env-filter"] }
